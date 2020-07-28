@@ -32,18 +32,19 @@
 // Bar chart
 new Chart(ctx, {
 data: {
-            labels: ['Movientos', 'Oscar', 'Jorge', 'Anyela', 'James', 'Alejandra'],
-            datasets: [{
-                label: 'Pikachu',
-                data: [result.moves.length, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 50, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 0, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
+        labels: [ result.stats[0].stat.name, 
+                  result.stats[1].stat.name, 
+                  result.stats[2].stat.name, 
+                  result.stats[3].stat.name, 
+                  result.stats[4].stat.name, 
+                  result.stats[5].stat.name],
+        datasets: [{label: 'charmander',
+                  data: [result.stats[0].base_stat, 
+                  result.stats[1].base_stat,
+                  result.stats[2].base_stat, 
+                  result.stats[3].base_stat, 
+                  result.stats[4].base_stat, 
+                  result.stats[5].base_stat],
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
                     'rgba(54, 162, 235, 1)',
